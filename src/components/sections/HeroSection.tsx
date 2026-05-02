@@ -18,7 +18,7 @@ export function HeroSection() {
     <SectionContainer
       className={joinClasses(
         "relative flex min-h-[100svh] overflow-hidden py-10 text-brand-light sm:py-14 lg:py-16",
-        "!px-4 sm:!px-6 md:!px-10 lg:!px-12",
+        "!ps-4 !pe-5 sm:!ps-6 sm:!pe-7 md:!ps-10 md:!pe-12 lg:!px-12",
       )}
       contentClassName="flex w-full items-center max-lg:py-1"
     >
@@ -58,13 +58,20 @@ export function HeroSection() {
       />
       <div className="pointer-events-none absolute inset-0 shadow-[inset_-180px_-30px_150px_-24px_rgba(12,18,28,0.42),inset_-60px_0_90px_rgba(14,21,34,0.22),inset_120px_0_110px_rgba(16,26,40,0.12)]" />
       <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_0_2px_rgba(201,167,104,0.26),inset_0_0_58px_rgba(12,21,35,0.45),0_-8px_40px_rgba(8,13,22,0.35),0_18px_50px_rgba(8,14,22,0.4)]" />
+      {/* Suaviza o corte entre arte mobile e vídeo (blur + vinheta leve). */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-y-0 left-[22%] right-0 z-[8] hidden max-lg:block"
+      >
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-brand-navy-deep/25 to-brand-navy/45 [mask-image:linear-gradient(90deg,transparent_0%,black_18%,black_100%)] [-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_18%,black_100%)] backdrop-blur-md supports-[backdrop-filter]:backdrop-blur-lg" />
+      </div>
 
       <div className="relative z-10 grid w-full items-center gap-8 sm:gap-9 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div
           className={joinClasses(
-            "w-full max-w-full space-y-6 rounded-2xl sm:space-y-7 lg:max-w-2xl lg:space-y-7",
-            "max-lg:bg-brand-navy-deep/25 max-lg:px-5 max-lg:py-7 max-lg:ring-1 max-lg:ring-brand-gold/15 max-lg:backdrop-blur-[3px]",
-            "sm:max-lg:px-7 sm:max-lg:py-8 md:max-lg:px-8",
+            "w-full max-w-full space-y-6 rounded-3xl sm:space-y-7 lg:max-w-2xl lg:space-y-7",
+            "max-lg:bg-brand-navy-deep/30 max-lg:py-7 max-lg:ps-5 max-lg:pe-8 max-lg:ring-1 max-lg:ring-brand-gold/15 max-lg:backdrop-blur-md",
+            "sm:max-lg:py-8 sm:max-lg:ps-6 sm:max-lg:pe-10 md:max-lg:ps-7 md:max-lg:pe-12",
           )}
         >
           <Badge>{heroContent.eyebrow}</Badge>
