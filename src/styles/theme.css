@@ -1,0 +1,21 @@
+:root {
+  --font-playfair: "Playfair Display", "Times New Roman", serif;
+  --font-lato: "Lato", "Arial", sans-serif;
+  --color-brand-navy: #3d4964;
+  --color-brand-navy-deep: #2f3b56;
+  --color-brand-cream: #f2d8b2;
+  --color-brand-gold: #c8a251;
+  --color-brand-light: #f4ede2;
+}
+
+@theme inline {
+  --color-brand-navy: var(--color-brand-navy);
+  --color-brand-navy-deep: var(--color-brand-navy-deep);
+  --color-brand-cream: var(--color-brand-cream);
+  --color-brand-gold: var(--color-brand-gold);
+  --color-brand-light: var(--color-brand-light);
+}
+
+.font-display {
+  font-family: var(--font-playfair), "Times New Roman", serif;
+}
